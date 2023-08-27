@@ -6,12 +6,14 @@ import { CountriesRoutingModule } from './countries-routing.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { ServiceNameService } from './services/country.service';
+import { CountryTableComponent } from './components/country-table/country-table.component';
 
 @NgModule({
   declarations: [
     ByCapitalComponent,
     ByRegionComponent,
-    ByCountryComponent
+    ByCountryComponent,
+    CountryTableComponent
   ],
   imports: [
     CommonModule,

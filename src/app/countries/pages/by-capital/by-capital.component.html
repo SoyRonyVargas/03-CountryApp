@@ -7,5 +7,13 @@
     <search-box
         (onValue)="searchByCapital($event)"
     ></search-box>
+    
+    <!-- {{countries}} -->
+
+    <div class="box mt-3">
+        <country-table
+            [countries]="countries"
+        ></country-table>
+    </div>
 
 </section>

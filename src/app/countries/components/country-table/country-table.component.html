@@ -1,0 +1,26 @@
+<table *ngIf="countries.length > 0" class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Flag</th>
+        <th scope="col">Icon</th>
+        <th scope="col">Name</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Population</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let item of countries">
+        <td> {{ item.flag }} </td>
+        <td>
+          <img class="img-icon" [src]="item.flags.svg" [alt]="item.capital">
+        </td>
+        <td> {{ item.capital }} </td>
+        <td> {{ item.name.common }} </td>
+        <td> {{ item.population | number }} </td>
+      </tr>
+    </tbody>
+</table>
+
+<div *ngIf="countries.length == 0" class="alert alert-warning" role="alert">
+    Without results
+</div>
