@@ -1,0 +1,43 @@
+<aside>
+  <h3>Search</h3>
+  <ul class="list-group">
+    <!-- <li
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="list-group-item"
+    >
+      <a class="link" [routerLink]="'/'"> Home </a>
+    </li>
+    <li
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="list-group-item"
+    >
+      <a class="link" [routerLink]="'/countries'"> Countries </a>
+    </li> -->
+    <li
+        [routerLink]="'/countries/by-country'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        class="list-group-item"
+    >
+      <a class="link" > By Country </a>
+    </li>
+    <li
+    [routerLink]="'/countries/by-capital'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="list-group-item"
+    >
+      <a class="link" > By Capital </a>
+    </li>
+    <li
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="list-group-item"
+      [routerLink]="'/countries/by-region'"
+    >
+      <a class="link" > By Region </a>
+    </li>
+  </ul>
+</aside>
