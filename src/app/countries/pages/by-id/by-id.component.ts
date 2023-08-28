@@ -14,6 +14,8 @@ export class ByIdComponent implements OnInit {
 
   country?:Country;
 
+  translations: string[] = []
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private countryService: CountryService,
@@ -31,6 +33,10 @@ export class ByIdComponent implements OnInit {
         if( country == null ) return this.router.navigateByUrl("");
 
         this.country = country[0]
+
+        this.translations = Object.keys(this.country.translations).map( trans => {
+          return this.country!.translations[trans].common
+        })
 
         return;
 

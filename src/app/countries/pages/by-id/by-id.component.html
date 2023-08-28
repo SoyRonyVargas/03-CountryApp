@@ -1,1 +1,40 @@
-{{ country }}
+<section class="row">
+  <article class="col-3">
+    <h3>Flag</h3>
+    <hr>
+    <img class="img-fluid rounded " [src]="country!.flags.svg" alt="">
+  </article>
+  <article class="col">
+    <h3>Information</h3>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Code: </strong> {{ country!.cca3 }}
+      </li>
+      <li class="list-group-item">
+        <strong>Population: </strong> {{ country!.population | number}}
+      </li>
+      <li class="list-group-item">
+        <strong>Population: </strong> {{ country!.population | number}}
+      </li>
+      <li class="list-group-item">
+        <strong>Population: </strong> {{ country!.population | number}}
+      </li>
+    </ul>
+  </article>
+</section>
+
+<section class="row mt-2">
+  <article class="col">
+    <h3>Translations</h3>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item ">
+        <div *ngFor="let translation of translations" class="badge text-bg-dark me-1">
+          {{ translation }}
+        </div>
+      </li>
+    </ul>
+  </article>
+
+</section>
