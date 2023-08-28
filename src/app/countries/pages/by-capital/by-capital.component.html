@@ -1,13 +1,14 @@
 <section>
-    
+
     <h3>Search By Capital</h3>
 
     <hr>
-    
+
     <search-box
+      [placeholder]="'Search a capital...'"
         (onValue)="searchByCapital($event)"
     ></search-box>
-    
+
     <!-- {{countries}} -->
 
     <div class="box mt-3">

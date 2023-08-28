@@ -1,1 +1,18 @@
-<p>by-region works!</p>
+<section>
+
+  <h3>Search By Region</h3>
+
+  <hr>
+
+  <search-box
+    [placeholder]="'Search a region...'"
+    (onValue)="searchByRegion($event)"
+  ></search-box>
+
+  <div class="box mt-3">
+      <country-table
+          [countries]="countries"
+      ></country-table>
+  </div>
+
+</section>

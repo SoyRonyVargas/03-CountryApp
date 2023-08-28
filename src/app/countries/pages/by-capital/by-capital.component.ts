@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ServiceNameService } from '../../services/country.service';
+import { CountryService } from '../../services/country.service';
 import { Country } from '../../interfaces/country';
 
 @Component({
@@ -8,20 +8,21 @@ import { Country } from '../../interfaces/country';
   styleUrls: ['./by-capital.component.css']
 })
 export class ByCapitalComponent implements OnInit {
-  
+
   public countries: Country[] = []
 
-  constructor( private countryService: ServiceNameService) { }
+  constructor( private countryService: CountryService ) { }
 
   ngOnInit(): void {
   }
 
   searchByCapital( busqueda : string ){
-    
-    this.countryService.searchCapital(busqueda).subscribe( term => {
-      this.countries = term
-    })
-    
+
+    this.countryService.searchCapital(busqueda)
+      .subscribe( term => {
+        this.countries = term
+      })
+
   }
 
 }

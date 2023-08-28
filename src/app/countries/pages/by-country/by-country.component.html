@@ -1,1 +1,20 @@
-<p>by-country works!</p>
+<section>
+
+  <h3>Search By Country</h3>
+
+  <hr>
+
+  <search-box
+      [placeholder]="'Search a country...'"
+      (onValue)="searchByCountry($event)"
+  ></search-box>
+
+  <!-- {{countries}} -->
+
+  <div class="box mt-3">
+      <country-table
+          [countries]="countries"
+      ></country-table>
+  </div>
+
+</section>
