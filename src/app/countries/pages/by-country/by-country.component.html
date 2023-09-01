@@ -4,17 +4,21 @@
 
   <hr>
 
+  <!-- (onValue)="searchByCountry($event)" -->
   <search-box
+      [initialValue]="initialValue"
       [placeholder]="'Search a country...'"
-      (onValue)="searchByCountry($event)"
+      (onDebounce)="searchByCountry($event)"
   ></search-box>
 
-  <!-- {{countries}} -->
+  <hr>
 
-  <div class="box mt-3">
-      <country-table
-          [countries]="countries"
-      ></country-table>
+  <loader *ngIf="loading"></loader>
+
+  <div *ngIf="!loading" class="box mt-3">
+    <country-table
+    [countries]="countries"
+    ></country-table>
   </div>
 
 </section>

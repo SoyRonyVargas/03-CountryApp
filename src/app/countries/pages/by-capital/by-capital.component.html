@@ -6,14 +6,18 @@
 
     <search-box
       [placeholder]="'Search a capital...'"
-        (onValue)="searchByCapital($event)"
+      [initialValue]="initialValue"
+      (onDebounce)="searchByCapital($event)"
     ></search-box>
 
-    <!-- {{countries}} -->
+    <hr>
+
+    <loader *ngIf="loading"></loader>
 
     <div class="box mt-3">
         <country-table
-            [countries]="countries"
+          *ngIf="!loading"
+          [countries]="countries"
         ></country-table>
     </div>
 

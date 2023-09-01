@@ -1,0 +1,9 @@
+
+.container-loader > img
+{
+  margin: 0px auto;
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
+  display: block;
+}

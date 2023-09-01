@@ -4,15 +4,30 @@
 
   <hr>
 
-  <search-box
-    [placeholder]="'Search a region...'"
-    (onValue)="searchByRegion($event)"
-  ></search-box>
+  <button
+    class="btn me-2"
+    *ngFor="let region of regions"
+    (click)="searchByRegion(region)"
+    [disabled]="loading"
+    [ngClass]="{
+      'btn-primary': selectedRegion == region ,
+      'btn-outline-primary': selectedRegion != region
+    }"
+  >
+    {{ region }}
+  </button>
+
+  <hr>
 
   <div class="box mt-3">
-      <country-table
-          [countries]="countries"
-      ></country-table>
+
+    <loader *ngIf="loading"></loader>
+
+    <country-table
+      *ngIf="!loading"
+      [countries]="countries"
+    ></country-table>
+
   </div>
 
 </section>

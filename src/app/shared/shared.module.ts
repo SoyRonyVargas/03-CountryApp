@@ -5,13 +5,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { CountriesComponent } from './pages/countries/countries.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SidebarComponent,
     CountriesComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
   exports: [
     HomeComponent,
     SidebarComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }
